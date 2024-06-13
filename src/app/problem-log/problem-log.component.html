@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h2>Bitácora de Problemas</h2>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Problema</th>
+        <th>Solución</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let problem of problems">
+        <td>{{ problem.id }}</td>
+        <td>{{ problem.issue }}</td>
+        <td>{{ problem.solution }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

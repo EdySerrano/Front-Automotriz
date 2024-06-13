@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h2>Registrar OST</h2>
+    <form (ngSubmit)="addOst()">
+      <div class="mb-3">
+        <label for="customerDni" class="form-label">DNI del Cliente</label>
+        <select id="customerDni" class="form-select" [(ngModel)]="ost.customerDni" name="customerDni" required>
+          <option *ngFor="let customer of customers" [value]="customer.dni">{{ customer.name }}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="plate" class="form-label">Placa</label>
+        <input type="text" class="form-control" id="plate" [(ngModel)]="ost.plate" name="plate" required>
+      </div>
+      <div class="mb-3">
+        <label for="brand" class="form-label">Marca</label>
+        <input type="text" class="form-control" id="brand" [(ngModel)]="ost.brand" name="brand" required>
+      </div>
+      <div class="mb-3">
+        <label for="model" class="form-label">Modelo</label>
+        <input type="text" class="form-control" id="model" [(ngModel)]="ost.model" name="model" required>
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Fecha y Hora</label>
+        <input type="datetime-local" class="form-control" id="date" [(ngModel)]="ost.date" name="date" required>
+      </div>
+      <div class="mb-3">
+        <label for="issue" class="form-label">Falla</label>
+        <textarea class="form-control" id="issue" [(ngModel)]="ost.issue" name="issue" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+  </div>
+  

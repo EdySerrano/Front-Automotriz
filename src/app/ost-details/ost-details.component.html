@@ -1,0 +1,30 @@
+<!-- src/app/ost-details/ost-details.component.html -->
+<div class="container mt-5">
+  <h2>Detalles de OST</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Cliente</th>
+        <th>Placa</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Fecha</th>
+        <th>Falla</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ost of osts">
+        <td>{{ ost.id }}</td>
+        <td>{{ getCustomerName(ost.customerDni) }}</td>
+        <td>{{ ost.plate }}</td>
+        <td>{{ ost.brand }}</td>
+        <td>{{ ost.model }}</td>
+        <td>{{ ost.date | date }}</td>
+        <td>{{ ost.issue }}</td>
+        <td>{{ ost.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
